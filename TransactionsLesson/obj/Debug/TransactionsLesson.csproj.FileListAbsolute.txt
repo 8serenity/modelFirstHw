@@ -1,0 +1,13 @@
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\TransactionsLesson.exe.config
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\TransactionsLesson.exe
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\TransactionsLesson.pdb
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\EntityFramework.dll
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\EntityFramework.xml
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\obj\Debug\TransactionsLesson.csprojResolveAssemblyReference.cache
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\obj\Debug\TransactionsLesson.csproj.CoreCompileInputs.cache
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\obj\Debug\TransactionsLesson.csproj.CopyComplete
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\obj\Debug\TransactionsLesson.exe
+C:\Users\Мухамедьян\Documents\Visual Studio 2017\Projects\TransactionsLesson\TransactionsLesson\obj\Debug\TransactionsLesson.pdb

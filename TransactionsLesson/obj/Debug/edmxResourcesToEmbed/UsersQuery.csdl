@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="UsersQuery" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="UsersQueryContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UserSet" EntityType="UsersQuery.User" />
+    <EntitySet Name="QuerySet" EntityType="UsersQuery.Query" />
+    <AssociationSet Name="UserQuery" Association="UsersQuery.UserQuery">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Query" EntitySet="QuerySet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Queries" Relationship="UsersQuery.UserQuery" FromRole="User" ToRole="Query" />
+  </EntityType>
+  <EntityType Name="Query">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="UserQuery">
+    <End Type="UsersQuery.User" Role="User" Multiplicity="1" />
+    <End Type="UsersQuery.Query" Role="Query" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User" />
+      <Dependent Role="Query" />
+    </ReferentialConstraint>
+  </Association>
+</Schema>

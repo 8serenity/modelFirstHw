@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="asdasdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="QuerySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserSet" Relationship="Self.FK_UserQuery" FromRole="QuerySet" ToRole="UserSet" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="QuerySet" Relationship="Self.FK_UserQuery" FromRole="UserSet" ToRole="QuerySet" />
+  </EntityType>
+  <Association Name="FK_UserQuery">
+    <End Role="UserSet" Type="Self.UserSet" Multiplicity="1" />
+    <End Role="QuerySet" Type="Self.QuerySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QuerySet">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="asdasdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="QuerySet" EntityType="Self.QuerySet" />
+    <EntitySet Name="UserSet" EntityType="Self.UserSet" />
+    <AssociationSet Name="FK_UserQuery" Association="Self.FK_UserQuery">
+      <End Role="UserSet" EntitySet="UserSet" />
+      <End Role="QuerySet" EntitySet="QuerySet" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
